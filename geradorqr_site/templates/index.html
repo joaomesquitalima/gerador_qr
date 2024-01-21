@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário HTML</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        h1{
+            margin-top: 20px;
+            text-align: center;
+        }
+
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 9px;
+            font-size: 22px;
+        }
+
+        input{
+            padding: 7px;
+            border-radius: 10px;
+            border-style: solid;
+        }
+
+
+        button{
+            font-size: 22px;
+            padding: 10px;
+            width: 100px;
+            background-color: rgb(6, 159, 6);
+            color: aliceblue;
+            border-radius: 10px;
+            width: 150px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerador de Qr code</h1>
+    <form action="/processar_formulario" method="post">
+        <label for="texto_usuario">Digite um texto:</label>
+        <input type="text" id="texto_usuario" name="texto_usuario" required>
+
+        <label for="arquivo">Digite o nome do arquivo:</label>
+        <input type="text" id="arquivo" name="arquivo" required>
+
+        <label for="cor_escolhida">Escolha uma cor:</label>
+        <input type="color" id="cor_escolhida" name="cor_escolhida" value="#ff0000">
+        
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

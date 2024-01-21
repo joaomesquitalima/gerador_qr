@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Recebida</title>
+    <style>
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        button{
+            background-color: blue;
+            padding: 10px;
+            color:aliceblue;
+            border-radius: 10px;
+            border-style: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h2>Imagem gerada:</h2>
+        <!-- Use a tag <img> com a string base64 como src -->
+        <img src="data:image/png;base64,{{ imagem_base64 }}" alt="Imagem Recebida">
+
+
+
+        <form action="/processar_formulario" method="post">
+        
+        <!-- Adicione um link de download -->
+        <a href="data:image/png;base64,{{ imagem_base64 }}" download="{{nome_arq}}.png">
+            <button type="button">Salvar imagem</button>
+        </a>
+    </div>
+
+    
+   
+</body>
+</html>
