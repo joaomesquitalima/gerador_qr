@@ -12,19 +12,32 @@
             box-sizing: border-box;
         }
 
-        h1{
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            background-color: rgb(35, 42, 64);
+        }
+
+        h2{
             margin-top: 20px;
             text-align: center;
+            color: rgb(255, 255, 255);
         }
 
 
         form{
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            
             gap: 9px;
             font-size: 22px;
+            
+            width: auto;
+            padding: 10px;
+            
         }
 
         input{
@@ -32,33 +45,39 @@
             border-radius: 10px;
             border-style: solid;
         }
-
+        label{
+            color: rgb(255, 255, 255);
+        }
 
         button{
             font-size: 22px;
             padding: 10px;
             width: 100px;
             background-color: rgb(6, 159, 6);
-            color: aliceblue;
+            color: rgb(255, 255, 255);
             border-radius: 10px;
-            width: 150px;
+            border: none;
+            width: auto;
             cursor: pointer;
+            align-self: center;
         }
     </style>
 </head>
 <body>
-    <h1>Gerador de Qr code</h1>
-    <form action="/processar_formulario" method="post">
-        <label for="texto_usuario">Digite um texto:</label>
-        <input type="text" id="texto_usuario" name="texto_usuario" required>
+    <h2>Gerador de Qr code</h2>
+    <div>
+        <form action="/processar_formulario" method="post">
+            <label for="texto_usuario">Digite um texto:</label>
+            <input type="text" id="texto_usuario" name="texto_usuario" required>
+    
+            <label for="arquivo">Digite o nome do arquivo:</label>
+            <input type="text" id="arquivo" name="arquivo" required>
+    
+            <button type="submit">Gerar Qrcode</button>
+        </form>
 
-        <label for="arquivo">Digite o nome do arquivo:</label>
-        <input type="text" id="arquivo" name="arquivo" required>
-
-        <label for="cor_escolhida">Escolha uma cor:</label>
-        <input type="color" id="cor_escolhida" name="cor_escolhida" value="#ff0000">
-        
-        <button type="submit">Enviar</button>
-    </form>
+    </div>
+    
 </body>
 </html>
+
