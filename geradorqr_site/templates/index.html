@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário HTML</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            background-color: rgb(35, 42, 64);
+        }
+
+        h2{
+            margin-top: 20px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+
+
+        form{
+            display: flex;
+            flex-direction: column;
+            
+            gap: 9px;
+            font-size: 22px;
+            
+            width: auto;
+            padding: 10px;
+            
+        }
+
+        input{
+            padding: 7px;
+            border-radius: 10px;
+            border-style: solid;
+        }
+        label{
+            color: rgb(255, 255, 255);
+        }
+
+        button{
+            font-size: 22px;
+            padding: 10px;
+            width: 100px;
+            background-color: rgb(6, 159, 6);
+            color: rgb(255, 255, 255);
+            border-radius: 10px;
+            border: none;
+            width: auto;
+            cursor: pointer;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Gerador de Qr code</h2>
+    <div>
+        <form action="/processar_formulario" method="post">
+            <label for="texto_usuario">Digite um texto:</label>
+            <input type="text" id="texto_usuario" name="texto_usuario" required>
+    
+            <label for="arquivo">Digite o nome do arquivo:</label>
+            <input type="text" id="arquivo" name="arquivo" required>
+    
+            <button type="submit">Gerar Qrcode</button>
+        </form>
+
+    </div>
+    
+</body>
+</html>
+
